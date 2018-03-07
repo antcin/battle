@@ -8,7 +8,5 @@ gem 'selenium-webdriver'
 gem 'rake'
 gem 'rspec'
 gem 'simplecov', require: false, group: :test
-gem 'simplecov', require: false, group: :test
 gem 'sinatra'
 gem 'shotgun'
-

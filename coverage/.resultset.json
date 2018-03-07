@@ -7,19 +7,19 @@
         1,
         1,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         null,
         null,
         null,
@@ -36,8 +36,19 @@
         1,
         null,
         null
+      ],
+      "/Users/WorkStuff/Desktop/gitDir/week3/battle/spec/hit_points_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1520437396
+    "timestamp": 1520444804
   }
 }

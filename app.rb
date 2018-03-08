@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/player'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -13,16 +14,17 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player1_name = $player1.name
-    @player2_name = $player2.name
+    @player1= $player1
+    @player2= $player2
     erb :play
   end
 
-  get '/attack' do
-    @player1_name = $player1.name
-    @player2_name = $player2.name
-    erb :attack
-  end
+  get '/compliment' do
+    @player1= $player1
+    @player2= $player2
+    @player1.compliment(@player2)
+    erb :compliment
+end
 
 
 

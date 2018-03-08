@@ -7,10 +7,6 @@ class Player
     @heart_points = heart_points
   end
 
-  def compliment(player)
-    player.receive_love
-  end
-
   def receive_love
     @heart_points -= 10
   end

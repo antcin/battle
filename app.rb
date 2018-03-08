@@ -22,7 +22,7 @@ class Battle < Sinatra::Base
   get '/compliment' do
     @player1= $player1
     @player2= $player2
-    @player1.compliment(@player2)
+    Game.new.compliment(@player2)
     erb :compliment
 end
 

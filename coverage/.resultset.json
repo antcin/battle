@@ -7,19 +7,27 @@
         1,
         1,
         1,
-        2,
+        3,
         null,
         null,
         1,
-        2,
-        2,
-        2,
+        3,
+        3,
+        3,
         null,
         null,
         1,
-        2,
-        2,
-        2,
+        3,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -28,10 +36,19 @@
       ],
       "/Users/WorkStuff/Desktop/gitDir/week3/battle/spec/features/web_helpers.rb": [
         1,
-        2,
-        2,
-        2,
-        2,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "/Users/WorkStuff/Desktop/gitDir/week3/battle/spec/features/attack_player_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/WorkStuff/Desktop/gitDir/week3/battle/spec/features/hit_points_spec.rb": [
@@ -51,6 +68,6 @@
         null
       ]
     },
-    "timestamp": 1520445693
+    "timestamp": 1520500872
   }
 }

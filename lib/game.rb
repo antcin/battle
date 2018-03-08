@@ -1,4 +1,3 @@
-require 'player'
 class Game
 
   def initialize(player1, player2)

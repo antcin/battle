@@ -1,3 +1,11 @@
-<%= @game.player1.name %> compliments <%= @game.player2.name %>
+<% if @game.current_turn == @game.player1 %>
+<%= @game.player1.name %> complimented <%= @game.player2.name %>
+<% else %>
+<%= @game.player2.name %> complimented <%= @game.player1.name %>
+<% end %>
 
-<a href='/play'>Aww</a>
+
+
+<form action="/switch-turns" method="post">
+  <input type="submit" value="Aww">
+</form>

@@ -1,6 +1,7 @@
 require 'sinatra/base'
-require './lib/player'
 require './lib/game'
+require './lib/player'
+require './lib/compliment'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -22,10 +23,14 @@ class Battle < Sinatra::Base
 
   get '/compliment' do
     @game = $game
-    @game.compliment(@game.player2)
-    @game.switch_turns
+    Compliment.run(@game.opponent_of(@game.current_turn))
     erb :compliment
-end
+  end
+
+  post '/switch-turns' do
+    $game.switch_turns
+    redirect('/play')
+  end
 
 
 

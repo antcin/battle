@@ -23,6 +23,7 @@ class Battle < Sinatra::Base
   get '/compliment' do
     @game = $game
     @game.compliment(@game.player2)
+    @game.switch_turns
     erb :compliment
 end
 

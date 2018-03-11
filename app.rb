@@ -5,6 +5,7 @@ require './lib/compliment'
 
 class Battle < Sinatra::Base
   enable :sessions
+
   get '/' do
     erb :index
   end
@@ -21,9 +22,17 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  post '/compliment' do
+    Compliment.run($game.opponent_of($game.current_turn))
+    if $game.game_over?
+      redirect '/game-over'
+    else
+      redirect '/compliment'
+    end
+  end
+
   get '/compliment' do
     @game = $game
-    Compliment.run(@game.opponent_of(@game.current_turn))
     erb :compliment
   end
 
@@ -32,8 +41,10 @@ class Battle < Sinatra::Base
     redirect('/play')
   end
 
-
-
+  get '/game-over' do
+   @game = $game
+   erb :game_over
+  end
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
